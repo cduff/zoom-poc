@@ -1,5 +1,14 @@
-import Frame from "react-frame-component";
+import { useEffect } from "react";
+import Frame, { useFrame } from "react-frame-component";
 import logo from "./images/logo.svg";
+
+function Zoom() {
+  const { window } = useFrame();
+  useEffect(() => {
+    console.log(window);
+  });
+  return <div>todo</div>;
+}
 
 export default function App() {
   return (
@@ -13,16 +22,16 @@ export default function App() {
         className="frame"
         head={
           <>
-            <script src="https://source.zoom.us/2.15.0/lib/vendor/react.min.js" />
-            <script src="https://source.zoom.us/2.15.0/lib/vendor/react-dom.min.js" />
-            <script src="https://source.zoom.us/2.15.0/lib/vendor/redux.min.js" />
-            <script src="https://source.zoom.us/2.15.0/lib/vendor/redux-thunk.min.js" />
-            <script src="https://source.zoom.us/2.15.0/lib/vendor/lodash.min.js" />
-            <script src="https://source.zoom.us/zoom-meeting-2.15.0.min.js" />
+            <script src="https://source.zoom.us/2.15.0/lib/vendor/react.min.js"></script>
+            <script src="https://source.zoom.us/2.15.0/lib/vendor/react-dom.min.js"></script>
+            <script src="https://source.zoom.us/2.15.0/lib/vendor/redux.min.js"></script>
+            <script src="https://source.zoom.us/2.15.0/lib/vendor/redux-thunk.min.js"></script>
+            <script src="https://source.zoom.us/2.15.0/lib/vendor/lodash.min.js"></script>
+            <script src="https://source.zoom.us/zoom-meeting-2.15.0.min.js"></script>
           </>
         }
       >
-        <div>todo</div>
+        <Zoom />
       </Frame>
       <div className="footer">
         <div className="footerContent">
