@@ -1,3 +1,4 @@
+import Frame from "react-frame-component";
 import logo from "./images/logo.svg";
 
 export default function App() {
@@ -8,7 +9,7 @@ export default function App() {
           <img className="logo" src={logo} alt="logo" />
         </div>
       </div>
-      <div>todo</div>
+      <Frame className="frame">todo</Frame>
       <div className="footer">
         <div className="footerContent">
           Terms of Use | Privacy Policy | Contact Us
