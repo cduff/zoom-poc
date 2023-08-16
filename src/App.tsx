@@ -5,7 +5,8 @@ import logo from "./images/logo.svg";
 function Zoom() {
   const { window } = useFrame();
   useEffect(() => {
-    console.log(window);
+    // @ts-ignore
+    console.log(window.ZoomMtg);
   });
   return <div>todo</div>;
 }
