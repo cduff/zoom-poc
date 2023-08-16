@@ -7,8 +7,8 @@ function Zoom() {
   useEffect(() => {
     // @ts-ignore
     console.log(window.ZoomMtg);
-  });
-  return <div>todo</div>;
+  }, [window]);
+  return <>todo</>;
 }
 
 export default function App() {
@@ -21,15 +21,14 @@ export default function App() {
       </div>
       <Frame
         className="frame"
-        initialContent={`<!DOCTYPE html>
-<html><head>
+        initialContent={`<!DOCTYPE html><html><head></head><body>
 <script src="https://source.zoom.us/2.15.0/lib/vendor/react.min.js"></script>
 <script src="https://source.zoom.us/2.15.0/lib/vendor/react-dom.min.js"></script>
 <script src="https://source.zoom.us/2.15.0/lib/vendor/redux.min.js"></script>
 <script src="https://source.zoom.us/2.15.0/lib/vendor/redux-thunk.min.js"></script>
 <script src="https://source.zoom.us/2.15.0/lib/vendor/lodash.min.js"></script>
 <script src="https://source.zoom.us/zoom-meeting-2.15.0.min.js"></script>
-</head><body><div></div></body></html>`}
+<div></div></body></html>`}
       >
         <Zoom />
       </Frame>
