@@ -32,6 +32,7 @@ export default function App() {
         <FrameContextConsumer>
           {({ window }) => {
             if (!window) return;
+            const name = Date.now().toString();
             // @ts-ignore
             const ZoomMtg = window.ZoomMtg;
             ZoomMtg.setZoomJSLib(
@@ -42,6 +43,29 @@ export default function App() {
             ZoomMtg.prepareWebSDK();
             ZoomMtg.i18n.load("en-US");
             ZoomMtg.i18n.reload("en-US");
+            ZoomMtg.init({
+              leaveUrl: window.location.href,
+              success: () => {
+                ZoomMtg.join({
+                  sdkKey: "3v8i6i0UTCiuKZ2cmL9lAg",
+                  signature:
+                    "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzZGtLZXkiOiIzdjhpNmkwVVRDaXVLWjJjbUw5bEFnIiwibW4iOiI0MzY0NzE0NDg2Iiwicm9sZSI6MCwiaWF0IjoxNjkyMjU5NzI1LCJleHAiOjE2OTIzNDYxMjUsImFwcEtleSI6IjN2OGk2aTBVVENpdUtaMmNtTDlsQWciLCJ0b2tlbkV4cCI6MTY5MjM0NjEyNX0.iZ8073TqXVp-JCMubThvNdCobBgdrdqCVM3T5ZPOkY0",
+                  meetingNumber: "4364714486",
+                  passWord: "219675",
+                  userName: name,
+                  userEmail: `${name}@domain.com`,
+                  success: (success: any) => {
+                    console.log(success);
+                  },
+                  error: (error: any) => {
+                    console.log(error);
+                  },
+                });
+              },
+              error: (error: any) => {
+                console.log(error);
+              },
+            });
             return null;
           }}
         </FrameContextConsumer>
