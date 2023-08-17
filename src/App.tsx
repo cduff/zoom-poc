@@ -2,6 +2,8 @@ import { useEffect } from "react";
 import Frame, { useFrame } from "react-frame-component";
 import logo from "./images/logo.svg";
 
+const version = "2.15.2";
+
 function Zoom() {
   const { window } = useFrame();
   useEffect(() => {
@@ -24,16 +26,16 @@ export default function App() {
         initialContent={`<!DOCTYPE html>
 <html lang="en">
   <head>
-    <link type="text/css" rel="stylesheet" href="https://source.zoom.us/2.15.2/css/bootstrap.css" />
-    <link type="text/css" rel="stylesheet" href="https://source.zoom.us/2.15.2/css/react-select.css" />
+    <link type="text/css" rel="stylesheet" href="https://source.zoom.us/${version}/css/bootstrap.css" />
+    <link type="text/css" rel="stylesheet" href="https://source.zoom.us/${version}/css/react-select.css" />
   </head>
   <body>
-    <script src="https://source.zoom.us/2.15.2/lib/vendor/react.min.js"></script>
-    <script src="https://source.zoom.us/2.15.2/lib/vendor/react-dom.min.js"></script>
-    <script src="https://source.zoom.us/2.15.2/lib/vendor/redux.min.js"></script>
-    <script src="https://source.zoom.us/2.15.2/lib/vendor/redux-thunk.min.js"></script>
-    <script src="https://source.zoom.us/2.15.2/lib/vendor/lodash.min.js"></script>
-    <script src="https://source.zoom.us/zoom-meeting-2.15.2.min.js"></script>
+    <script src="https://source.zoom.us/${version}/lib/vendor/react.min.js"></script>
+    <script src="https://source.zoom.us/${version}/lib/vendor/react-dom.min.js"></script>
+    <script src="https://source.zoom.us/${version}/lib/vendor/redux.min.js"></script>
+    <script src="https://source.zoom.us/${version}/lib/vendor/redux-thunk.min.js"></script>
+    <script src="https://source.zoom.us/${version}/lib/vendor/lodash.min.js"></script>
+    <script src="https://source.zoom.us/zoom-meeting-${version}.min.js"></script>
     <div></div>
   </body>
 </html>`}
