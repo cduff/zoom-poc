@@ -22,12 +22,12 @@ export default function App() {
       <Frame
         className="frame"
         initialContent={`<!DOCTYPE html><html lang="en"><head></head><body>
-<script src="https://source.zoom.us/2.15.0/lib/vendor/react.min.js"></script>
-<script src="https://source.zoom.us/2.15.0/lib/vendor/react-dom.min.js"></script>
-<script src="https://source.zoom.us/2.15.0/lib/vendor/redux.min.js"></script>
-<script src="https://source.zoom.us/2.15.0/lib/vendor/redux-thunk.min.js"></script>
-<script src="https://source.zoom.us/2.15.0/lib/vendor/lodash.min.js"></script>
-<script src="https://source.zoom.us/zoom-meeting-2.15.0.min.js"></script>
+<script src="https://source.zoom.us/2.15.2/lib/vendor/react.min.js"></script>
+<script src="https://source.zoom.us/2.15.2/lib/vendor/react-dom.min.js"></script>
+<script src="https://source.zoom.us/2.15.2/lib/vendor/redux.min.js"></script>
+<script src="https://source.zoom.us/2.15.2/lib/vendor/redux-thunk.min.js"></script>
+<script src="https://source.zoom.us/2.15.2/lib/vendor/lodash.min.js"></script>
+<script src="https://source.zoom.us/zoom-meeting-2.15.2.min.js"></script>
 <div></div></body></html>`}
       >
         <Zoom />
