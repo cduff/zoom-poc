@@ -45,7 +45,8 @@ export default function App() {
             ZoomMtg.i18n.reload("en-US");
             ZoomMtg.init({
               leaveUrl: window.location.href,
-              success: () => {
+              success: (success: any) => {
+                console.log(success);
                 ZoomMtg.join({
                   sdkKey: "3v8i6i0UTCiuKZ2cmL9lAg",
                   signature:
