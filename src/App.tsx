@@ -8,9 +8,14 @@ function Zoom() {
   const { window } = useFrame();
   useEffect(() => {
     // @ts-ignore
-    console.log(window.ZoomMtg);
+    const ZoomMtg = window.ZoomMtg;
+    ZoomMtg.setZoomJSLib(`https://source.zoom.us/${version}/lib`, "/av");
+    ZoomMtg.preLoadWasm();
+    ZoomMtg.prepareWebSDK();
+    ZoomMtg.i18n.load("en-US");
+    ZoomMtg.i18n.reload("en-US");
   }, [window]);
-  return <>todo</>;
+  return null;
 }
 
 export default function App() {
@@ -36,7 +41,6 @@ export default function App() {
     <script src="https://source.zoom.us/${version}/lib/vendor/redux-thunk.min.js"></script>
     <script src="https://source.zoom.us/${version}/lib/vendor/lodash.min.js"></script>
     <script src="https://source.zoom.us/zoom-meeting-${version}.min.js"></script>
-    <div></div>
   </body>
 </html>`}
       >
