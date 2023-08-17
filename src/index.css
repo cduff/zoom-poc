@@ -48,4 +48,5 @@ body {
 .frame {
   border: 0;
   height: calc(var(--app-height) - 120px);
+  width: 100%;
 }
