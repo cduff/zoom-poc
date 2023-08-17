@@ -21,14 +21,22 @@ export default function App() {
       </div>
       <Frame
         className="frame"
-        initialContent={`<!DOCTYPE html><html lang="en"><head></head><body>
-<script src="https://source.zoom.us/2.15.2/lib/vendor/react.min.js"></script>
-<script src="https://source.zoom.us/2.15.2/lib/vendor/react-dom.min.js"></script>
-<script src="https://source.zoom.us/2.15.2/lib/vendor/redux.min.js"></script>
-<script src="https://source.zoom.us/2.15.2/lib/vendor/redux-thunk.min.js"></script>
-<script src="https://source.zoom.us/2.15.2/lib/vendor/lodash.min.js"></script>
-<script src="https://source.zoom.us/zoom-meeting-2.15.2.min.js"></script>
-<div></div></body></html>`}
+        initialContent={`<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link type="text/css" rel="stylesheet" href="https://source.zoom.us/2.15.2/css/bootstrap.css" />
+    <link type="text/css" rel="stylesheet" href="https://source.zoom.us/2.15.2/css/react-select.css" />
+  </head>
+  <body>
+    <script src="https://source.zoom.us/2.15.2/lib/vendor/react.min.js"></script>
+    <script src="https://source.zoom.us/2.15.2/lib/vendor/react-dom.min.js"></script>
+    <script src="https://source.zoom.us/2.15.2/lib/vendor/redux.min.js"></script>
+    <script src="https://source.zoom.us/2.15.2/lib/vendor/redux-thunk.min.js"></script>
+    <script src="https://source.zoom.us/2.15.2/lib/vendor/lodash.min.js"></script>
+    <script src="https://source.zoom.us/zoom-meeting-2.15.2.min.js"></script>
+    <div></div>
+  </body>
+</html>`}
       >
         <Zoom />
       </Frame>
