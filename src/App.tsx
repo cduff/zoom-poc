@@ -1,9 +1,11 @@
 import Frame, { FrameContextConsumer } from "react-frame-component";
 import logo from "./images/logo.svg";
+import { useAppHeightCssVariable } from "./useAppHeightCssVariable";
 
 const version = "2.15.2";
 
 export default function App() {
+  useAppHeightCssVariable();
   return (
     <>
       <div className="headerContainer">

@@ -47,5 +47,5 @@ body {
 
 .frame {
   border: 0;
-  height: calc(100vh - 120px);
+  height: calc(var(--app-height) - 120px);
 }
