@@ -44,7 +44,7 @@ export default function App() {
             ZoomMtg.i18n.load("en-US");
             ZoomMtg.i18n.reload("en-US");
             ZoomMtg.init({
-              leaveUrl: window.location.href,
+              leaveUrl: "about:blank",
               success: (success: any) => {
                 console.log(success);
                 ZoomMtg.join({
