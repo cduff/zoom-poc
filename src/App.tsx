@@ -1,22 +1,7 @@
-import { useEffect } from "react";
-import Frame, { useFrame } from "react-frame-component";
+import Frame, { FrameContextConsumer } from "react-frame-component";
 import logo from "./images/logo.svg";
 
 const version = "2.15.2";
-
-function Zoom() {
-  const { window } = useFrame();
-  useEffect(() => {
-    // @ts-ignore
-    const ZoomMtg = window.ZoomMtg;
-    ZoomMtg.setZoomJSLib(`https://source.zoom.us/${version}/lib`, "/av");
-    ZoomMtg.preLoadWasm();
-    ZoomMtg.prepareWebSDK();
-    ZoomMtg.i18n.load("en-US");
-    ZoomMtg.i18n.reload("en-US");
-  }, [window]);
-  return null;
-}
 
 export default function App() {
   return (
@@ -44,7 +29,22 @@ export default function App() {
   </body>
 </html>`}
       >
-        <Zoom />
+        <FrameContextConsumer>
+          {({ window }) => {
+            if (!window) return;
+            // @ts-ignore
+            const ZoomMtg = window.ZoomMtg;
+            ZoomMtg.setZoomJSLib(
+              `https://source.zoom.us/${version}/lib`,
+              "/av"
+            );
+            ZoomMtg.preLoadWasm();
+            ZoomMtg.prepareWebSDK();
+            ZoomMtg.i18n.load("en-US");
+            ZoomMtg.i18n.reload("en-US");
+            return null;
+          }}
+        </FrameContextConsumer>
       </Frame>
       <div className="footer">
         <div className="footerContent">
