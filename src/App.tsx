@@ -14,12 +14,16 @@ export default function App() {
         </div>
       </div>
       <Frame
+        title="Praxhub Zoom"
         className="frame"
         initialContent={`<!DOCTYPE html>
 <html lang="en">
   <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link type="text/css" rel="stylesheet" href="https://source.zoom.us/${version}/css/bootstrap.css" />
     <link type="text/css" rel="stylesheet" href="https://source.zoom.us/${version}/css/react-select.css" />
+    <title>Praxhub Zoom</title>
   </head>
   <body>
     <script src="https://source.zoom.us/${version}/lib/vendor/react.min.js"></script>
