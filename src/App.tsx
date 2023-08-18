@@ -60,11 +60,11 @@ export default function App() {
               success: (success: any) => {
                 console.log(success);
                 ZoomMtg.join({
-                  sdkKey: "3v8i6i0UTCiuKZ2cmL9lAg",
+                  sdkKey: "X9Bq5k1fRpe8HzRDgLxSLQ",
                   signature:
-                    "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzZGtLZXkiOiIzdjhpNmkwVVRDaXVLWjJjbUw5bEFnIiwibW4iOiI0MzY0NzE0NDg2Iiwicm9sZSI6MCwiaWF0IjoxNjkyMzE3Mzk1LCJleHAiOjE2OTI0MDM3OTUsImFwcEtleSI6IjN2OGk2aTBVVENpdUtaMmNtTDlsQWciLCJ0b2tlbkV4cCI6MTY5MjQwMzc5NX0.VwiUzex_LDZRk1kL8hHc7s7yTqFCoaNgSl3hkblD-RQ",
-                  meetingNumber: "4364714486",
-                  passWord: "219675",
+                    "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzZGtLZXkiOiJYOUJxNWsxZlJwZThIelJEZ0x4U0xRIiwibW4iOiI4OTA1MzczNzg1OSIsInJvbGUiOjAsImlhdCI6MTY5MjMzNjI1NCwiZXhwIjoxNjkyNDIyNjU0LCJhcHBLZXkiOiJYOUJxNWsxZlJwZThIelJEZ0x4U0xRIiwidG9rZW5FeHAiOjE2OTI0MjI2NTR9.F3fHVWBJ0-IVnWsJkuw9Jhvg1Ez7G4vbjGZLNG2Iaz0",
+                  meetingNumber: "89053737859",
+                  passWord: "123456",
                   userName: name,
                   userEmail: `${name}@domain.com`,
                   success: (success: any) => {
