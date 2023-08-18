@@ -54,7 +54,7 @@ export default function App() {
                 ZoomMtg.join({
                   sdkKey: "3v8i6i0UTCiuKZ2cmL9lAg",
                   signature:
-                    "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzZGtLZXkiOiIzdjhpNmkwVVRDaXVLWjJjbUw5bEFnIiwibW4iOiI0MzY0NzE0NDg2Iiwicm9sZSI6MCwiaWF0IjoxNjkyMjU5NzI1LCJleHAiOjE2OTIzNDYxMjUsImFwcEtleSI6IjN2OGk2aTBVVENpdUtaMmNtTDlsQWciLCJ0b2tlbkV4cCI6MTY5MjM0NjEyNX0.iZ8073TqXVp-JCMubThvNdCobBgdrdqCVM3T5ZPOkY0",
+                    "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzZGtLZXkiOiIzdjhpNmkwVVRDaXVLWjJjbUw5bEFnIiwibW4iOiI0MzY0NzE0NDg2Iiwicm9sZSI6MCwiaWF0IjoxNjkyMzE3Mzk1LCJleHAiOjE2OTI0MDM3OTUsImFwcEtleSI6IjN2OGk2aTBVVENpdUtaMmNtTDlsQWciLCJ0b2tlbkV4cCI6MTY5MjQwMzc5NX0.VwiUzex_LDZRk1kL8hHc7s7yTqFCoaNgSl3hkblD-RQ",
                   meetingNumber: "4364714486",
                   passWord: "219675",
                   userName: name,

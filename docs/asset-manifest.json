@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/zoom-poc/static/css/main.aa471569.css",
-    "main.js": "/zoom-poc/static/js/main.f44027f9.js",
+    "main.js": "/zoom-poc/static/js/main.a0ce8170.js",
     "static/media/logo.svg": "/zoom-poc/static/media/logo.bd19f6a375f73ea2476bf7a70937b7a7.svg",
     "index.html": "/zoom-poc/index.html",
     "main.aa471569.css.map": "/zoom-poc/static/css/main.aa471569.css.map",
-    "main.f44027f9.js.map": "/zoom-poc/static/js/main.f44027f9.js.map"
+    "main.a0ce8170.js.map": "/zoom-poc/static/js/main.a0ce8170.js.map"
   },
   "entrypoints": [
     "static/css/main.aa471569.css",
-    "static/js/main.f44027f9.js"
+    "static/js/main.a0ce8170.js"
   ]
 }
