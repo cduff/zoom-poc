@@ -55,6 +55,7 @@ export default function App() {
             ZoomMtg.i18n.reload("en-US");
             ZoomMtg.init({
               leaveUrl: "about:blank",
+              disableJoinAudio: true,
               disablePreview: true,
               enableFullHD: true,
               success: (success: any) => {
