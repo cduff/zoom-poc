@@ -13,19 +13,14 @@ export default function App() {
           <img className="logo" src={logo} alt="logo" />
         </div>
       </div>
-      <div className="frameContainer">
-        <Frame
-          title="Praxhub Zoom"
-          className="frame"
-          allow="camera; microphone"
-          scrolling="no"
-          frameBorder="0"
-          allowFullScreen
-          initialContent={`<!DOCTYPE html>
+      <Frame
+        title="Praxhub Zoom"
+        className="frame"
+        initialContent={`<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Praxhub Zoom</title>
     <link type="text/css" rel="stylesheet" href="https://source.zoom.us/${version}/css/bootstrap.css" />
     <link type="text/css" rel="stylesheet" href="https://source.zoom.us/${version}/css/react-select.css" />
     <style>
@@ -33,7 +28,6 @@ export default function App() {
         min-width: auto !important;
       }
     </style>
-    <title>Praxhub Zoom</title>
   </head>
   <body>
     <script src="https://source.zoom.us/${version}/lib/vendor/react.min.js"></script>
@@ -42,55 +36,53 @@ export default function App() {
     <script src="https://source.zoom.us/${version}/lib/vendor/redux-thunk.min.js"></script>
     <script src="https://source.zoom.us/${version}/lib/vendor/lodash.min.js"></script>
     <script src="https://source.zoom.us/zoom-meeting-${version}.min.js"></script>
-    <div></div>
   </body>
 </html>`}
-        >
-          <FrameContextConsumer>
-            {({ window }) => {
-              if (!window) return;
-              const name = Date.now().toString();
-              // @ts-ignore
-              const ZoomMtg = window.ZoomMtg;
-              ZoomMtg.setZoomJSLib(
-                `https://source.zoom.us/${version}/lib`,
-                "/av"
-              );
-              ZoomMtg.preLoadWasm();
-              ZoomMtg.prepareWebSDK();
-              ZoomMtg.i18n.load("en-US");
-              ZoomMtg.i18n.reload("en-US");
-              ZoomMtg.init({
-                leaveUrl: "about:blank",
-                disablePreview: true,
-                enableFullHD: true,
-                success: (success: any) => {
-                  console.log(success);
-                  ZoomMtg.join({
-                    sdkKey: "3v8i6i0UTCiuKZ2cmL9lAg",
-                    signature:
-                      "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzZGtLZXkiOiIzdjhpNmkwVVRDaXVLWjJjbUw5bEFnIiwibW4iOiI0MzY0NzE0NDg2Iiwicm9sZSI6MCwiaWF0IjoxNjkyMzE3Mzk1LCJleHAiOjE2OTI0MDM3OTUsImFwcEtleSI6IjN2OGk2aTBVVENpdUtaMmNtTDlsQWciLCJ0b2tlbkV4cCI6MTY5MjQwMzc5NX0.VwiUzex_LDZRk1kL8hHc7s7yTqFCoaNgSl3hkblD-RQ",
-                    meetingNumber: "4364714486",
-                    passWord: "219675",
-                    userName: name,
-                    userEmail: `${name}@domain.com`,
-                    success: (success: any) => {
-                      console.log(success);
-                    },
-                    error: (error: any) => {
-                      console.log(error);
-                    },
-                  });
-                },
-                error: (error: any) => {
-                  console.log(error);
-                },
-              });
-              return null;
-            }}
-          </FrameContextConsumer>
-        </Frame>
-      </div>
+      >
+        <FrameContextConsumer>
+          {({ window }) => {
+            if (!window) return;
+            const name = Date.now().toString();
+            // @ts-ignore
+            const ZoomMtg = window.ZoomMtg;
+            ZoomMtg.setZoomJSLib(
+              `https://source.zoom.us/${version}/lib`,
+              "/av"
+            );
+            ZoomMtg.preLoadWasm();
+            ZoomMtg.prepareWebSDK();
+            ZoomMtg.i18n.load("en-US");
+            ZoomMtg.i18n.reload("en-US");
+            ZoomMtg.init({
+              leaveUrl: "about:blank",
+              disablePreview: true,
+              enableFullHD: true,
+              success: (success: any) => {
+                console.log(success);
+                ZoomMtg.join({
+                  sdkKey: "3v8i6i0UTCiuKZ2cmL9lAg",
+                  signature:
+                    "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzZGtLZXkiOiIzdjhpNmkwVVRDaXVLWjJjbUw5bEFnIiwibW4iOiI0MzY0NzE0NDg2Iiwicm9sZSI6MCwiaWF0IjoxNjkyMzE3Mzk1LCJleHAiOjE2OTI0MDM3OTUsImFwcEtleSI6IjN2OGk2aTBVVENpdUtaMmNtTDlsQWciLCJ0b2tlbkV4cCI6MTY5MjQwMzc5NX0.VwiUzex_LDZRk1kL8hHc7s7yTqFCoaNgSl3hkblD-RQ",
+                  meetingNumber: "4364714486",
+                  passWord: "219675",
+                  userName: name,
+                  userEmail: `${name}@domain.com`,
+                  success: (success: any) => {
+                    console.log(success);
+                  },
+                  error: (error: any) => {
+                    console.log(error);
+                  },
+                });
+              },
+              error: (error: any) => {
+                console.log(error);
+              },
+            });
+            return null;
+          }}
+        </FrameContextConsumer>
+      </Frame>
     </>
   );
 }
