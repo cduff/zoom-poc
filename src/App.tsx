@@ -28,6 +28,11 @@ export default function App() {
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link type="text/css" rel="stylesheet" href="https://source.zoom.us/${version}/css/bootstrap.css" />
     <link type="text/css" rel="stylesheet" href="https://source.zoom.us/${version}/css/react-select.css" />
+    <style>
+      html, body {
+        min-width: auto !important;
+      }
+    </style>
     <title>Praxhub Zoom</title>
   </head>
   <body>
