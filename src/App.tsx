@@ -83,6 +83,11 @@ export default function App() {
           }}
         </FrameContextConsumer>
       </Frame>
+      <div className="footer">
+        <div className="footerContent">
+          Terms of Use | Privacy Policy | Contact Us
+        </div>
+      </div>
     </>
   );
 }

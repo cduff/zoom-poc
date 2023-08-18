@@ -36,4 +36,23 @@ body {
 .frame {
   border: 0;
   height: calc(var(--app-height) - 60px);
+  @media (min-width: 1200px) {
+    height: calc(var(--app-height) - 120px);
+  }
+}
+
+.footer {
+  display: none;
+  @media (min-width: 1200px) {
+    display: block;
+  }
+  height: 60px;
+  background-color: #020444;
+  margin-top: auto;
+  color: white;
+}
+
+.footerContent {
+  margin-top: 21px;
+  margin-left: 15px;
 }
