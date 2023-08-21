@@ -55,6 +55,7 @@ export default function App() {
         disablePreview: true,
         enableFullHD: true,
         meetingInfo: [],
+        isLockBottom: false,
         success: (success) => {
           console.log(success);
           ZoomMtg.join({
