@@ -1,8 +1,14 @@
-import Frame, { FrameContextConsumer } from "react-frame-component";
 import logo from "./images/logo.svg";
 import { useAppHeightCssVariable } from "./useAppHeightCssVariable";
 
 const version = "2.15.2";
+const sdkKey = "X9Bq5k1fRpe8HzRDgLxSLQ";
+const signature =
+  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzZGtLZXkiOiJYOUJxNWsxZlJwZThIelJEZ0x4U0xRIiwibW4iOiI4OTA1MzczNzg1OSIsInJvbGUiOjAsImlhdCI6MTY5MjU3OTEzMywiZXhwIjoxNjkyNjY1NTMzLCJhcHBLZXkiOiJYOUJxNWsxZlJwZThIelJEZ0x4U0xRIiwidG9rZW5FeHAiOjE2OTI2NjU1MzN9.TNZWy9U3LXJFSIeisvd5swFYR6S6pGsDuFdAHIRNVLQ";
+const meetingNumber = 89053737859;
+const passWord = "123456";
+const userName = Date.now().toString();
+const userEmail = `${userName}@domain.com`;
 
 export default function App() {
   useAppHeightCssVariable();
@@ -13,10 +19,10 @@ export default function App() {
           <img className="logo" src={logo} alt="logo" />
         </div>
       </div>
-      <Frame
+      <iframe
         title="Praxhub Zoom"
-        className="frame"
-        initialContent={`<!DOCTYPE html>
+        className="iframe"
+        srcDoc={`<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
@@ -28,9 +34,11 @@ export default function App() {
     <link type="text/css" rel="stylesheet" href="https://source.zoom.us/${version}/css/bootstrap.css" />
     <link type="text/css" rel="stylesheet" href="https://source.zoom.us/${version}/css/react-select.css" />
     <style>
+      /*
       html, body {
         min-width: auto !important;
       }
+      */
     </style>
   </head>
   <body>
@@ -40,54 +48,45 @@ export default function App() {
     <script src="https://source.zoom.us/${version}/lib/vendor/redux-thunk.min.js"></script>
     <script src="https://source.zoom.us/${version}/lib/vendor/lodash.min.js"></script>
     <script src="https://source.zoom.us/zoom-meeting-${version}.min.js"></script>
+    <script>
+      ZoomMtg.setZoomJSLib(
+        "https://source.zoom.us/${version}/lib",
+        "/av"
+      );
+      ZoomMtg.preLoadWasm();
+      ZoomMtg.prepareWebSDK();
+      ZoomMtg.i18n.load("en-US");
+      ZoomMtg.i18n.reload("en-US");
+      ZoomMtg.init({
+        leaveUrl: "about:blank",
+        disablePreview: true,
+        enableFullHD: true,
+        meetingInfo: [],
+        success: (success) => {
+          console.log(success);
+          ZoomMtg.join({
+            sdkKey: "${sdkKey}",
+            signature: "${signature}",
+            meetingNumber: ${meetingNumber},
+            passWord: "${passWord}",
+            userName: "${userName}",
+            userEmail: "${userEmail}",
+            success: (success) => {
+              console.log(success);
+            },
+            error: (error) => {
+              console.log(error);
+            },
+          });
+        },
+        error: (error) => {
+          console.log(error);
+        },
+      });
+    </script>
   </body>
 </html>`}
-      >
-        <FrameContextConsumer>
-          {({ window }) => {
-            if (!window) return;
-            const name = Date.now().toString();
-            // @ts-ignore
-            const ZoomMtg = window.ZoomMtg;
-            ZoomMtg.setZoomJSLib(
-              `https://source.zoom.us/${version}/lib`,
-              "/av"
-            );
-            ZoomMtg.preLoadWasm();
-            ZoomMtg.prepareWebSDK();
-            ZoomMtg.i18n.load("en-US");
-            ZoomMtg.i18n.reload("en-US");
-            ZoomMtg.init({
-              leaveUrl: "about:blank",
-              disablePreview: true,
-              enableFullHD: true,
-              meetingInfo: [],
-              success: (success: any) => {
-                console.log(success);
-                ZoomMtg.join({
-                  sdkKey: "X9Bq5k1fRpe8HzRDgLxSLQ",
-                  signature:
-                    "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzZGtLZXkiOiJYOUJxNWsxZlJwZThIelJEZ0x4U0xRIiwibW4iOiI4OTA1MzczNzg1OSIsInJvbGUiOjAsImlhdCI6MTY5MjU3OTEzMywiZXhwIjoxNjkyNjY1NTMzLCJhcHBLZXkiOiJYOUJxNWsxZlJwZThIelJEZ0x4U0xRIiwidG9rZW5FeHAiOjE2OTI2NjU1MzN9.TNZWy9U3LXJFSIeisvd5swFYR6S6pGsDuFdAHIRNVLQ",
-                  meetingNumber: "89053737859",
-                  passWord: "123456",
-                  userName: name,
-                  userEmail: `${name}@domain.com`,
-                  success: (success: any) => {
-                    console.log(success);
-                  },
-                  error: (error: any) => {
-                    console.log(error);
-                  },
-                });
-              },
-              error: (error: any) => {
-                console.log(error);
-              },
-            });
-            return null;
-          }}
-        </FrameContextConsumer>
-      </Frame>
+      />
       <div className="footer">
         <div className="footerContent">
           Terms of Use | Privacy Policy | Contact Us

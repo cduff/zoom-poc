@@ -33,7 +33,7 @@ body {
   margin-left: 15px;
 }
 
-.frame {
+.iframe {
   border: 0;
   height: calc(var(--app-height) - 60px);
   @media (min-width: 1200px) {
