@@ -60,8 +60,8 @@ export default function App() {
             ZoomMtg.init({
               leaveUrl: "about:blank",
               disablePreview: true,
-              enableHD: true,
               enableFullHD: true,
+              meetingInfo: [],
               success: (success: any) => {
                 console.log(success);
                 ZoomMtg.join({
