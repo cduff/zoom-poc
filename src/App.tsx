@@ -33,6 +33,11 @@ export default function App() {
     />
     <link type="text/css" rel="stylesheet" href="https://source.zoom.us/${version}/css/bootstrap.css" />
     <link type="text/css" rel="stylesheet" href="https://source.zoom.us/${version}/css/react-select.css" />
+    <style>
+      html, body {
+        min-width: auto !important;
+      }
+    </style>
   </head>
   <body>
     <script src="https://source.zoom.us/${version}/lib/vendor/react.min.js"></script>
