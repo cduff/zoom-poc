@@ -51,9 +51,10 @@ export default function App() {
       ZoomMtg.i18n.load("en-US");
       ZoomMtg.i18n.reload("en-US");
       ZoomMtg.init({
-        leaveUrl: "about:blank",
         disablePreview: true,
         enableFullHD: true,
+        isLockBottom: false,
+        leaveUrl: "about:blank",
         meetingInfo: [],
         success: (success) => {
           console.log(success);
