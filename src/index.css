@@ -35,7 +35,8 @@ body {
 
 .iframe {
   border: 0;
-  height: calc(var(--app-height) - 60px);
+  /*height: calc(var(--app-height) - 60px);*/
+  height: calc(100vh - 60px);
   @media (min-width: 1200px) {
     height: calc(var(--app-height) - 120px);
   }
