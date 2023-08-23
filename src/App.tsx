@@ -4,8 +4,8 @@ import { useAppHeightCssVariable } from "./useAppHeightCssVariable";
 const version = "2.15.2";
 const sdkKey = "X9Bq5k1fRpe8HzRDgLxSLQ";
 const signature =
-  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzZGtLZXkiOiJYOUJxNWsxZlJwZThIelJEZ0x4U0xRIiwibW4iOiI4OTA1MzczNzg1OSIsInJvbGUiOjAsImlhdCI6MTY5Mjc0ODQ4OCwiZXhwIjoxNjkyODM0ODg4LCJhcHBLZXkiOiJYOUJxNWsxZlJwZThIelJEZ0x4U0xRIiwidG9rZW5FeHAiOjE2OTI4MzQ4ODh9.HmaDb7i30x-90TfChiAvlhEoJkPxbd0d7XECZL1G-Y8";
-const meetingNumber = 89053737859;
+  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzZGtLZXkiOiJYOUJxNWsxZlJwZThIelJEZ0x4U0xRIiwibW4iOiI4MzU4NjExNDI2MyIsInJvbGUiOjAsImlhdCI6MTY5Mjc1NDE0MSwiZXhwIjoxNjkyODQwNTQxLCJhcHBLZXkiOiJYOUJxNWsxZlJwZThIelJEZ0x4U0xRIiwidG9rZW5FeHAiOjE2OTI4NDA1NDF9.vJ9pbBdlskdsborRdMi4jGidEa7jUMvlclfucm8uHt4";
+const meetingNumber = 83586114263;
 const passWord = "123456";
 const userName = Date.now().toString();
 const userEmail = `${userName}@domain.com`;
@@ -58,6 +58,7 @@ export default function App() {
       ZoomMtg.init({
         disablePreview: true,
         enableFullHD: true,
+        enableHD: true,
         isLockBottom: false,
         leaveUrl: "about:blank",
         meetingInfo: [],
