@@ -2,11 +2,11 @@ import logo from "./images/logo.svg";
 import { useAppHeightCssVariable } from "./useAppHeightCssVariable";
 
 const version = "2.15.2";
-const sdkKey = "3v8i6i0UTCiuKZ2cmL9lAg";
+const sdkKey = "X9Bq5k1fRpe8HzRDgLxSLQ";
 const signature =
-  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzZGtLZXkiOiIzdjhpNmkwVVRDaXVLWjJjbUw5bEFnIiwibW4iOiI0MzY0NzE0NDg2Iiwicm9sZSI6MCwiaWF0IjoxNjkyNjk0Mjg3LCJleHAiOjE2OTI3ODA2ODcsImFwcEtleSI6IjN2OGk2aTBVVENpdUtaMmNtTDlsQWciLCJ0b2tlbkV4cCI6MTY5Mjc4MDY4N30.H9MSEr4CxtHnXktdAzVHZUMrL3jOQH__VF7IHJXSKP8";
-const meetingNumber = 4364714486;
-const passWord = "219675";
+  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzZGtLZXkiOiJYOUJxNWsxZlJwZThIelJEZ0x4U0xRIiwibW4iOiI4OTA1MzczNzg1OSIsInJvbGUiOjAsImlhdCI6MTY5Mjc0ODQ4OCwiZXhwIjoxNjkyODM0ODg4LCJhcHBLZXkiOiJYOUJxNWsxZlJwZThIelJEZ0x4U0xRIiwidG9rZW5FeHAiOjE2OTI4MzQ4ODh9.HmaDb7i30x-90TfChiAvlhEoJkPxbd0d7XECZL1G-Y8";
+const meetingNumber = 89053737859;
+const passWord = "123456";
 const userName = Date.now().toString();
 const userEmail = `${userName}@domain.com`;
 
