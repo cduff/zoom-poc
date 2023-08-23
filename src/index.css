@@ -39,6 +39,11 @@ body {
   @media (min-width: 1200px) {
     height: calc(var(--app-height) - 120px);
   }
+  position: fixed;
+  top: 60px;
+  left: 0;
+  right: 0;
+  width: 100%;
 }
 
 .footer {
