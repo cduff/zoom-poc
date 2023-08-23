@@ -19,7 +19,6 @@ export default function App() {
           <img className="logo" src={logo} alt="logo" />
         </div>
       </div>
-      <div className="spacer" />
       <iframe
         title="Praxhub Zoom"
         className="iframe"

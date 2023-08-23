@@ -33,26 +33,18 @@ body {
   margin-left: 15px;
 }
 
-.spacer {
-  height: 110vh;
-}
-
 .iframe {
   border: 0;
-  position: fixed;
-  top: 60px;
-  left: 0;
-  right: 0;
-  width: 100%;
-  height: calc(100vh - 60px);
+  height: calc(var(--app-height) - 60px);
   @media (min-width: 1200px) {
+    height: calc(var(--app-height) - 120px);
   }
 }
 
 .footer {
   display: none;
   @media (min-width: 1200px) {
-    /*display: block;*/
+    display: block;
   }
   height: 60px;
   background-color: #020444;
