@@ -38,13 +38,9 @@ body {
   /*height: calc(var(--app-height) - 60px);*/
   height: calc(100vh - 60px);
   @media (min-width: 1200px) {
-    height: calc(var(--app-height) - 120px);
+    /*height: calc(var(--app-height) - 120px);*/
+    height: calc(100vh - 120px);
   }
-  position: fixed;
-  top: 60px;
-  left: 0;
-  right: 0;
-  width: 100%;
 }
 
 .footer {

@@ -19,7 +19,6 @@ export default function App() {
           <img className="logo" src={logo} alt="logo" />
         </div>
       </div>
-      <div style={{ height: 1500 }} />
       <iframe
         title="Praxhub Zoom"
         className="iframe"
