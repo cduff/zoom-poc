@@ -4,12 +4,11 @@ import { useAppHeightCssVariable } from "./useAppHeightCssVariable";
 const version = "2.15.2";
 const sdkKey = "X9Bq5k1fRpe8HzRDgLxSLQ";
 const signature =
-  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzZGtLZXkiOiJYOUJxNWsxZlJwZThIelJEZ0x4U0xRIiwibW4iOiI4NjAyMjI4NDU1NSIsInJvbGUiOjAsImlhdCI6MTY5MzE4MjQyOSwiZXhwIjoxNjkzMjY4ODI5LCJhcHBLZXkiOiJYOUJxNWsxZlJwZThIelJEZ0x4U0xRIiwidG9rZW5FeHAiOjE2OTMyNjg4Mjl9.gCdhlQppNLF7ON0WkewZlzDvVtULkbuhHV3DW8euYUc";
-const meetingNumber = 86022284555;
+  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzZGtLZXkiOiJYOUJxNWsxZlJwZThIelJEZ0x4U0xRIiwibW4iOiI4OTM1OTcwNjM3MyIsInJvbGUiOjAsImlhdCI6MTY5MzI4NDA0NiwiZXhwIjoxNjkzMzcwNDQ2LCJhcHBLZXkiOiJYOUJxNWsxZlJwZThIelJEZ0x4U0xRIiwidG9rZW5FeHAiOjE2OTMzNzA0NDZ9.zEHaRtKCUwPss_lNzWmIEj0qet69BHL2r6bDXnag_0A";
+const meetingNumber = 89359706373;
 const passWord = "123456";
-let userName = Date.now().toString();
+const userName = Date.now().toString();
 const userEmail = `${userName}@domain.com`;
-userName = "web-sdk iframe";
 
 export default function App() {
   useAppHeightCssVariable();
