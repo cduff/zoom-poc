@@ -4,7 +4,7 @@ import { useAppHeightCssVariable } from "./useAppHeightCssVariable";
 const version = "2.17.0";
 const sdkKey = "X9Bq5k1fRpe8HzRDgLxSLQ";
 const signature =
-  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzZGtLZXkiOiJYOUJxNWsxZlJwZThIelJEZ0x4U0xRIiwibW4iOiI4NDczNzEzNDQ1NiIsInJvbGUiOjAsImlhdCI6MTY5NjIxOTg1OSwiZXhwIjoxNjk2MzA2MjU5LCJhcHBLZXkiOiJYOUJxNWsxZlJwZThIelJEZ0x4U0xRIiwidG9rZW5FeHAiOjE2OTYzMDYyNTl9.gih2gTDVvUQt4FeMzT1dmccdDWLw3LcGI27kfEI1WsY";
+  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzZGtLZXkiOiJYOUJxNWsxZlJwZThIelJEZ0x4U0xRIiwibW4iOiI4NDczNzEzNDQ1NiIsInJvbGUiOjAsImlhdCI6MTY5Njk4NDA2OCwiZXhwIjoxNjk3MDcwNDY4LCJhcHBLZXkiOiJYOUJxNWsxZlJwZThIelJEZ0x4U0xRIiwidG9rZW5FeHAiOjE2OTcwNzA0Njh9.sYJ-_CDMylw1LpjU3cCTT-Fav3z227KEi0DiesRwRMQ";
 const meetingNumber = 84737134456;
 const passWord = "NjVZNzlhSjF4Mjg1SlByK25sRDJvdz09";
 const userName = Date.now().toString();
