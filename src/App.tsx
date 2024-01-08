@@ -54,7 +54,6 @@ export default function App() {
       ZoomMtg.preLoadWasm();
       ZoomMtg.prepareWebSDK();
       ZoomMtg.i18n.load("en-US");
-      ZoomMtg.i18n.reload("en-US");
       ZoomMtg.init({
         disablePreview: true,
         enableFullHD: true,
